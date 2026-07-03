@@ -7,20 +7,68 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <HEADER>
-        <img src="https://tse2.mm.bing.net/th/id/OIP.W0QecZmjgQGj6glnXNDW2gHaHK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo do Pokémon" width="80px" height="80px">  
-        <h1>Pikachu Catalogando</h1>
+   <header class=" bg-yellow-300 px-8 py-4 shadow-md flex justify-between items-center">
+    <div class="flex items-center gap-4">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.W0QecZmjgQGj6glnXNDW2gHaHK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo do Pokémon" width="80px" height="80px">  
+    <h1 class="text-3xl font-bold">
+        Pikachu Catalogando
+    </h1>
+</div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pokedex</a></li>
-                <li><a href="#">Sobre</a></li>
+            <ul class="flex gap-6">
+                <li><button class="hover:text-yellow-500 transition">Home</button></li>
+                <li><button class="hover:text-yellow-500 transition">Pokedex</button></li>
+                <li><button class="hover:text-yellow-500 transition">Sobre</button></li>
             </ul>
         </nav>
-    </HEADER>
-    <main>
-        <p>PESQUISAR POKEMON</p>
+    </header>
+    <main class="max-w-5xl mx-auto p-8">
+        <h2 class="text-2xl font-semibold text-center">
+    Pesquisar Pokémon
+    </h2>
+    <h3 class="text-lg text-center text-gray-600">
+        Digite o nome ou número do Pokémon desejado
+    </h3>
+        <form id="pokemon-form" class="flex justify-center mt-6">
+            <input id="pokemon-input" type="text" placeholder="Digite o nome do Pokémon" class="border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <button type="submit" class="bg-yellow-400 text-white px-4 py-2 rounded-r hover:bg-yellow-500 transition">Pesquisar</button>
+        </form>
+        <div id="pokemon-card" class="mt-10 max-w-md mx-auto bg-white rounded-xl shadow-lg p-6 hidden transition-all duration-700">
+    <img id="pokemon-img"
+         src=""
+         alt="Pokémon"
+         class="w-40 mx-auto">
+    <h3 id="pokemon-name"
+        class="text-3xl font-bold text-center mt-4">
+        Nome
+    </h3>
+    <p id="pokemon-id"
+       class="text-1xl text-center text-white">
+        #000
+    </p>
+    <div class="mt-6 space-y-3">
+        <p>
+            <strong>Tipo:</strong>
+            <span id="pokemon-type"></span>
+        </p>
+        <p>
+            <strong>Altura:</strong>
+            <span id="pokemon-height"></span>
+        </p>
+        <p>
+            <strong>Peso:</strong>
+            <span id="pokemon-weight"></span>
+        </p>
+        <p>
+            <strong>Habilidades:</strong>
+            <span id="pokemon-abilities"></span>
+        </p>
+    </div>
+</div>
     </main>
-    
+    <footer class="bg-yellow-300 text-center py-4 mt-10">
+        <p>&copy; 2026 Pikachu Catalogando. Todos os direitos reservados.</p>
+    </footer>
+    <script src="Script.js"></script>
 </body>
 </html>
